@@ -17,7 +17,7 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
-            name: "SwiftGenBinary",
+            name: "swiftgen",
             url: "https://github.com/SwiftGen/SwiftGen/releases/download/6.6.2/swiftgen-6.6.2.artifactbundle.zip",
             checksum: "7586363e24edcf18c2da3ef90f379e9559c1453f48ef5e8fbc0b818fbbc3a045"
         ),
@@ -25,7 +25,7 @@ let package = Package(
         .plugin(
             name: "SwiftGenPlugin",
             capability: .buildTool(),
-            dependencies: ["SwiftGenBinary"]
+            dependencies: ["swiftgen"]
         ),
     ]
 )
