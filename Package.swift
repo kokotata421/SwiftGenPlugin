@@ -5,6 +5,8 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftGenPlugin",
+    
+    defaultLocalization: "en",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .plugin(name: "SwiftGenPlugin", targets:  ["SwiftGenPlugin"]),
@@ -26,6 +28,10 @@ let package = Package(
             name: "SwiftGenPlugin",
             capability: .buildTool(),
             dependencies: ["swiftgen"]
+        ),
+        .executableTarget(
+            name: "Example",
+            plugins: ["SwiftGenPlugin"]
         ),
     ]
 )

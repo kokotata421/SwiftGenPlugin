@@ -19,6 +19,7 @@ struct SwiftLintPlugins: BuildToolPlugin {
         // Note: Writes to DerivedData and not to the project's source directories.
         let swiftGenOutputsDir = context.pluginWorkDirectory
         
+        
         // If a `swiftgen.yml` file is located in the package directory it will be used, and the resulting generated files will be recreated for each target.
         //
         // In addition, if a `swiftgen.yml` is present in the root directory of any target's source files it will be used to generate sources for that target only.

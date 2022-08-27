@@ -1,0 +1,14 @@
+strings:
+  inputs:
+    - Base.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: ${DERIVED_SOURCES_DIR}/Strings.generated.swift
+xcassets:
+  inputs:
+      - Media.xcassets
+  outputs:
+      - templateName: swift5
+        output: ${DERIVED_SOURCES_DIR}/Logos-Constants.swift
+        params:
+          enumName: Logos
